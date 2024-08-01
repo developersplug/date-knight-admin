@@ -11,7 +11,7 @@ const data = [
     email: 'john.doe@example.com',
     profile: 'view profile',
     Approve: <BsToggleOn />,
-    Action: <DatePicker/>,
+    Action: '',
     banPeriod: '7 days',
     details:
     {
@@ -23,9 +23,37 @@ const data = [
   {
     name: 'Jane Smith',
     email: 'jane.smith@example.com',
-    profile: <button>veiw profile</button>,
+    profile: 'view profile',
     Approve: <BsToggleOn />,
-    Action: <DatePicker />,
+    Action: '',
+    banPeriod: '30 days',
+    details:
+    {
+      location: 'USA,Washington',
+      lastname: 'smith',
+
+    },
+  },
+  {
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    profile: 'view profile',
+    Approve: <BsToggleOn />,
+    Action: '',
+    banPeriod: '30 days',
+    details:
+    {
+      location: 'USA,Washington',
+      lastname: 'smith',
+
+    },
+  },
+  {
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    profile: 'view profile',
+    Approve: <BsToggleOn />,
+    Action: '',
     banPeriod: '30 days',
     details:
     {
@@ -85,7 +113,7 @@ const Table = ({ onProfileClick, span }) => {
                   ) : (
                     <BsToggleOff className='text-gray-500 transition-colors duration-300' />
                   )}</td>
-                <td className='w-[20%] py-2 pl-6 '>{item.Action}  </td>
+                <td className='w-[20%] py-2 pl-6 '><DatePicker/>  </td>
                 <td className='w-[23%] py-2 pl-16 '>{item.banPeriod}</td>
               </tr>
             ))}
