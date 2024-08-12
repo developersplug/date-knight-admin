@@ -1,9 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logoipsum from '../../assets/logoipsum.png';
 import { IoMenu } from "react-icons/io5";
 
-const Sidebar = ({ isOpen, toggleSideBar }) => {
+
+const Sidebar = ({ isOpen, toggleSideBar, onLoginClick }) => {
+
   return (
     <>
 
@@ -58,7 +60,11 @@ const Sidebar = ({ isOpen, toggleSideBar }) => {
             </li>
           </ul>
         </div>
+        <button className='text-[#FFA768] p-2 whitespace-nowrap bg-gray-50 rounded-md font-light text-sm md:font-normal md:text-xl w-full md:mt-48 mt-40'>
+          <Link to="/login" >Log in</Link>
+        </button>
       </div>
+
     </>
   );
 };

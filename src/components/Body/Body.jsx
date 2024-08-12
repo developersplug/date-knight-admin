@@ -1,9 +1,9 @@
 import React from 'react'
 import {Outlet} from 'react-router-dom'
 
-const Body = () => {
+const Body = ({ isBlurred }) => {
   return (
-    <div>
+    <div className={`transition ${isBlurred ? 'blur-md' : ''}`}>
       <Outlet/>
     </div>
   )
